@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import MobileSidebar from '@/components/MobileSidebar';
+import MobileBottomBar from '@/components/MobileBottomBar';
 
 const GlobalSearchModal = dynamic(() => import('@/components/GlobalSearchModal'), { ssr: false });
 
@@ -401,6 +402,12 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
           onClose={() => setSearchModalOpen(false)}
         />
       )}
+
+      {/* Mobile Bottom Navigation Bar (Below Menus in Mobile View) */}
+      <MobileBottomBar
+        onOpenMenu={() => setMobileMenuOpen(true)}
+        onOpenSearch={handleOpenSearch}
+      />
     </header>
   );
 }

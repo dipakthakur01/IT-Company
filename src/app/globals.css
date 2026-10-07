@@ -114,4 +114,9 @@
   }
 }
 
+/* Mobile Safe Area Bottom Navigation */
+.safe-area-bottom {
+  padding-bottom: calc(0.375rem + env(safe-area-inset-bottom, 0px));
+}
+
 
