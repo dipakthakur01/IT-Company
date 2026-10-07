@@ -128,7 +128,7 @@ export default function FounderSection() {
                   </a>
 
                   <a
-                    href="https://github.com"
+                    href="https://github.com/dipakthakur01"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-border text-text-secondary hover:text-text-primary font-medium text-xs shadow-2xs transition-colors"

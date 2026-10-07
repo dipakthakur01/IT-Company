@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FaqSection from '@/components/FaqSection';
-import { Mail, Phone, MapPin, Clock, MessageSquare, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageSquare, CheckCircle2, ArrowRight, Facebook, Instagram, Github } from 'lucide-react';
 import { api } from '@/lib/api';
 import { useToast } from '@/components/ui/ToastContext';
 
@@ -78,8 +78,8 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-primary-400 shrink-0 mt-0.5" />
                     <div>
                       <div className="font-bold text-white text-sm">General Inquiries</div>
-                      <a href="mailto:hello@zorventech.com" className="text-slate-400 hover:text-white transition-colors">
-                        hello@zorventech.com
+                      <a href="mailto:zorventech@gmail.com" className="text-slate-400 hover:text-white transition-colors">
+                        zorventech@gmail.com
                       </a>
                     </div>
                   </div>
@@ -109,6 +109,40 @@ export default function ContactPage() {
                     <div>
                       <div className="font-bold text-white text-sm">Business Operations</div>
                       <div className="text-slate-400">Monday – Friday: 9:00 AM – 6:00 PM NPT</div>
+                    </div>
+                  </div>
+
+                  {/* Official Social Channels */}
+                  <div className="pt-4 border-t border-slate-800">
+                    <div className="text-xs font-semibold text-slate-300 mb-2.5">Official Social Channels</div>
+                    <div className="flex items-center gap-2.5">
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61594809779931"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Facebook"
+                        className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
+                      >
+                        <Facebook className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/zorventech/?hl=en"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Instagram"
+                        className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
+                      >
+                        <Instagram className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="https://github.com/dipakthakur01"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                        className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </div>

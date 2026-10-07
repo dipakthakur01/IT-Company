@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Github, Twitter, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Github, Facebook, Instagram, ShieldCheck } from 'lucide-react';
 import { api } from '@/lib/api';
 import { useToast } from '@/components/ui/ToastContext';
 
@@ -66,28 +66,40 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://linkedin.com"
+                href="https://www.facebook.com/profile.php?id=61594809779931"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Facebook Profile"
                 className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://www.instagram.com/zorventech/?hl=en"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram Profile"
+                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://github.com/dipakthakur01"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub Profile"
                 className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
               >
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn Profile"
                 className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary-500 transition-colors"
               >
-                <Twitter className="w-4 h-4" />
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -155,7 +167,9 @@ export default function Footer() {
             <div className="pt-2 text-xs text-slate-400 space-y-1">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-accent-cyan" />
-                <span>hello@zorventech.com</span>
+                <a href="mailto:zorventech@gmail.com" className="hover:text-white transition-colors">
+                  zorventech@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-primary-400" />

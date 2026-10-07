@@ -21,7 +21,10 @@ import {
   Lock,
   Phone,
   Mail,
-  ExternalLink
+  ExternalLink,
+  Facebook,
+  Instagram,
+  Github
 } from 'lucide-react';
 
 interface MobileSidebarProps {
@@ -363,16 +366,47 @@ export default function MobileSidebar({ isOpen, onClose, onOpenSearch }: MobileS
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
+              {/* Social Channels */}
+              <div className="flex items-center justify-center gap-3 pt-1">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61594809779931"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                  className="w-8 h-8 rounded-lg bg-white border border-border flex items-center justify-center text-text-muted hover:text-primary-600 transition-colors shadow-xs"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/zorventech/?hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                  className="w-8 h-8 rounded-lg bg-white border border-border flex items-center justify-center text-text-muted hover:text-primary-600 transition-colors shadow-xs"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://github.com/dipakthakur01"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="w-8 h-8 rounded-lg bg-white border border-border flex items-center justify-center text-text-muted hover:text-primary-600 transition-colors shadow-xs"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              </div>
+
               <div className="flex items-center justify-between text-[11px] text-text-secondary pt-1">
                 <span className="flex items-center gap-1.5 font-medium">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span>99.9% SLA Operational</span>
                 </span>
                 <a
-                  href="mailto:hello@zorventech.com"
+                  href="mailto:zorventech@gmail.com"
                   className="text-primary-600 hover:underline font-mono"
                 >
-                  hello@zorventech.com
+                  zorventech@gmail.com
                 </a>
               </div>
             </div>

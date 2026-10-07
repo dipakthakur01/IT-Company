@@ -574,7 +574,7 @@ export default function AdminDashboardPage() {
                   <label className="font-semibold text-text-secondary block mb-1">Primary Inquiries Email</label>
                   <input
                     type="email"
-                    defaultValue="hello@zorventech.com"
+                    defaultValue="zorventech@gmail.com"
                     className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
                   />
                 </div>

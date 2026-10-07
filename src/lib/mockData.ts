@@ -276,7 +276,7 @@ export const fallbackTeam: TeamMemberItem[] = [
     avatar: '/founder.jpg',
     expertise: 'Distributed Systems, Cloud Architecture & Tech Strategy',
     linkedin_url: 'https://linkedin.com',
-    github_url: 'https://github.com',
+    github_url: 'https://github.com/dipakthakur01',
     sort_order: 1
   },
   {
