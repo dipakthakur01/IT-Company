@@ -4,7 +4,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle, Zap, CheckCircle2 } from 'lucide-react';
+import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 
 function AdminLoginForm() {
   const router = useRouter();
@@ -112,34 +112,10 @@ function AdminLoginForm() {
 
       <div className="rounded-3xl bg-white border border-border shadow-elevated p-8 space-y-6">
         <div className="space-y-1">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-text-primary">Admin Authentication</h2>
-            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
-              <CheckCircle2 className="w-3 h-3" /> Pre-Filled
-            </span>
-          </div>
+          <h2 className="text-xl font-bold text-text-primary">Administrator Authentication</h2>
           <p className="text-xs text-text-secondary">
-            Administrator credentials have been pre-typed for instant access.
+            Sign in with your role-authorized credentials.
           </p>
-        </div>
-
-        {/* 1-Click Instant Login Button */}
-        <button
-          type="button"
-          onClick={performDirectLogin}
-          disabled={loading}
-          className="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all active:scale-[0.99] border border-emerald-500/30"
-        >
-          <Zap className="w-4 h-4 fill-current text-amber-300" />
-          <span>{loading ? 'Authenticating...' : '⚡ 1-Click Direct Admin Access'}</span>
-          <ArrowRight className="w-3.5 h-3.5 ml-1" />
-        </button>
-
-        <div className="relative flex items-center justify-center">
-          <div className="border-t border-slate-200 w-full" />
-          <span className="bg-white px-3 text-[11px] uppercase tracking-wider text-slate-400 font-mono font-medium">
-            or sign in with form
-          </span>
         </div>
 
         {error && (

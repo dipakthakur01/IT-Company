@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Github, Twitter, ShieldCheck, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Github, Twitter, ShieldCheck } from 'lucide-react';
 import { api } from '@/lib/api';
 import { useToast } from '@/components/ui/ToastContext';
 
@@ -115,7 +115,6 @@ export default function Footer() {
               <li><Link href="/case-studies" className="hover:text-primary-400 transition-colors">Case Studies</Link></li>
               <li><Link href="/process" className="hover:text-primary-400 transition-colors">Our 8-Step Process</Link></li>
               <li><Link href="/careers" className="hover:text-primary-400 transition-colors">Careers <span className="text-[10px] bg-primary-900 text-primary-300 px-1.5 py-0.5 rounded font-bold">WE&apos;RE HIRING</span></Link></li>
-              <li><Link href="/admin/login?direct=true" className="hover:text-primary-400 transition-colors flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300"><Lock className="w-3 h-3 text-primary-500" /> Admin Access</Link></li>
             </ul>
           </div>
 
@@ -176,14 +175,6 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</Link>
             <Link href="/contact" className="hover:text-slate-400 transition-colors">Security & Compliance</Link>
             <Link href="/client/login" className="hover:text-slate-400 transition-colors">Client Portal</Link>
-            <Link
-              href="/admin/login?direct=true"
-              className="inline-flex items-center gap-1.5 text-primary-400 hover:text-white transition-colors font-medium bg-slate-900/90 px-2.5 py-1 rounded-md border border-slate-800"
-              title="Direct Admin Login"
-            >
-              <Lock className="w-3 h-3 text-primary-400" />
-              <span>Admin Portal</span>
-            </Link>
           </div>
         </div>
       </div>

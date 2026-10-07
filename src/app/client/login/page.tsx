@@ -94,12 +94,6 @@ export default function ClientLoginPage() {
               </div>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-text-secondary space-y-1 font-mono">
-              <div className="font-bold text-text-primary">Demo Client Credentials:</div>
-              <div>Email: <code>sarah.j@acmecorp.com</code></div>
-              <div>Pass: <code>Client@2026!</code></div>
-            </div>
-
             <button
               type="submit"
               disabled={loading}
