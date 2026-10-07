@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
-  Menu,
   X,
   ChevronDown,
   Search,
@@ -369,7 +368,7 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
             </Link>
           </div>
 
-          {/* Mobile Menu Trigger */}
+          {/* Mobile Actions (Search only - menu trigger is anchored in bottom bar) */}
           <div className="flex items-center gap-1.5 lg:hidden">
             <button
               onClick={handleOpenSearch}
@@ -377,13 +376,6 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
               className="p-2 text-text-secondary hover:text-text-primary rounded-xl hover:bg-slate-100 transition-colors"
             >
               <Search className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open mobile navigation"
-              className="p-2 rounded-xl text-text-primary hover:bg-slate-100 transition-colors flex items-center justify-center active:scale-95"
-            >
-              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
