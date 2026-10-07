@@ -88,6 +88,10 @@ export default function AdminDashboardPage() {
 
   useEffect(() => {
     const token = localStorage.getItem('zorven_admin_token') || localStorage.getItem('neon_admin_token');
+    if (!token) {
+      router.push('/admin/login');
+      return;
+    }
     const storedUser = localStorage.getItem('zorven_admin_user') || localStorage.getItem('neon_admin_user');
     if (storedUser) {
       try {

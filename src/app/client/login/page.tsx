@@ -8,8 +8,8 @@ import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 
 export default function ClientLoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('sarah.j@acmecorp.com');
-  const [password, setPassword] = useState('Client@2026!');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {

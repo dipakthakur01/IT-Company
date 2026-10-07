@@ -58,7 +58,8 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
   }, [pathname]);
 
   return (
-    <header
+    <>
+      <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/90 backdrop-blur-md shadow-subtle border-b border-border py-3.5'
@@ -387,27 +388,28 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
           </div>
         </div>
       </div>
-
-      {/* Right-Side Slide-out Mobile Sidebar Drawer */}
-      <MobileSidebar
-        isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-        onOpenSearch={handleOpenSearch}
-      />
-
-      {/* Global Search Dialog */}
-      {searchModalOpen && (
-        <GlobalSearchModal
-          isOpen={searchModalOpen}
-          onClose={() => setSearchModalOpen(false)}
-        />
-      )}
-
-      {/* Mobile Bottom Navigation Bar (Below Menus in Mobile View) */}
-      <MobileBottomBar
-        onOpenMenu={() => setMobileMenuOpen(true)}
-        onOpenSearch={handleOpenSearch}
-      />
     </header>
-  );
+
+    {/* Right-Side Slide-out Mobile Sidebar Drawer */}
+    <MobileSidebar
+      isOpen={mobileMenuOpen}
+      onClose={() => setMobileMenuOpen(false)}
+      onOpenSearch={handleOpenSearch}
+    />
+
+    {/* Global Search Dialog */}
+    {searchModalOpen && (
+      <GlobalSearchModal
+        isOpen={searchModalOpen}
+        onClose={() => setSearchModalOpen(false)}
+      />
+    )}
+
+    {/* Mobile Bottom Navigation Bar - Rendered OUTSIDE header so it stays fixed to bottom */}
+    <MobileBottomBar
+      onOpenMenu={() => setMobileMenuOpen(true)}
+      onOpenSearch={handleOpenSearch}
+    />
+  </>
+);
 }

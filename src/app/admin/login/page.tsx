@@ -8,36 +8,12 @@ import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 
 function AdminLoginForm() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const directParam = searchParams.get('direct');
-  const autologinParam = searchParams.get('autologin');
 
-  // Pre-typed admin credentials by default
-  const [email, setEmail] = useState('admin@zorventech.com');
-  const [password, setPassword] = useState('Admin@ZorvenTech2026!');
+  // Inputs start empty - no demo access or pre-filled credentials
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const performDirectLogin = () => {
-    setLoading(true);
-    localStorage.setItem('zorven_admin_token', 'demo-admin-jwt-token-2026');
-    localStorage.setItem(
-      'zorven_admin_user',
-      JSON.stringify({
-        name: 'Alex Harrison',
-        email: 'admin@zorventech.com',
-        role: 'super_admin'
-      })
-    );
-    router.push('/admin/dashboard');
-  };
-
-  // Auto-login if accessed via direct link (?direct=true or ?autologin=true)
-  useEffect(() => {
-    if (directParam === 'true' || autologinParam === 'true' || autologinParam === '1') {
-      performDirectLogin();
-    }
-  }, [directParam, autologinParam]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,26 +33,10 @@ function AdminLoginForm() {
         localStorage.setItem('zorven_admin_user', JSON.stringify(data.user));
         router.push('/admin/dashboard');
       } else {
-        // Fallback authorization
-        if (
-          (email === 'admin@zorventech.com' && password === 'Admin@ZorvenTech2026!') ||
-          (email === 'admin@neoncode.com' && password === 'Admin@NeonCode2026!')
-        ) {
-          performDirectLogin();
-        } else {
-          setError(data.message || 'Invalid administrator credentials.');
-        }
+        setError(data.message || 'Invalid administrator credentials.');
       }
     } catch (err: any) {
-      // Offline / Vercel demo fallback
-      if (
-        (email === 'admin@zorventech.com' && password === 'Admin@ZorvenTech2026!') ||
-        (email === 'admin@neoncode.com' && password === 'Admin@NeonCode2026!')
-      ) {
-        performDirectLogin();
-      } else {
-        setError('Cannot connect to authentication service.');
-      }
+      setError('Unable to reach authentication service. Please verify backend connection.');
     } finally {
       setLoading(false);
     }

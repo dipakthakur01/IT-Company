@@ -33,7 +33,7 @@ export default function MobileBottomBar({ onOpenMenu }: MobileBottomBarProps) {
   return (
     <nav
       aria-label="Mobile Navigation"
-      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] px-2 py-1.5 safe-area-bottom"
+      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] px-2 py-1.5 safe-area-bottom pointer-events-auto"
     >
       <div className="max-w-md mx-auto grid grid-cols-5 items-center justify-items-center">
         {/* 1. Home */}
